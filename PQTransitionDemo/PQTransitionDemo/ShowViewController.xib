@@ -20,40 +20,24 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5C-f6-TW6">
-                    <rect key="frame" x="10" y="30" width="355" height="598"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GHv-43-xQg">
-                        <rect key="frame" x="0.0" y="0.0" width="355" height="598"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </view>
-                    <blurEffect style="light"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="10"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                </visualEffectView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yay-SQ-vFK">
-                    <rect key="frame" x="175" y="633" width="24" height="24"/>
-                    <state key="normal" image="close.png"/>
-                    <connections>
-                        <action selector="closeBtnClick:" destination="-1" eventType="touchUpInside" id="IDb-qM-jFv"/>
-                    </connections>
-                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4B-Tk-M47">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MFI-rl-DuQ">
+                            <rect key="frame" x="16" y="483" width="200" height="110"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <constraints>
-                <constraint firstItem="Yay-SQ-vFK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UWx-fI-Q5U"/>
-                <constraint firstItem="P5C-f6-TW6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="jfd-2F-McI"/>
-                <constraint firstItem="Yay-SQ-vFK" firstAttribute="top" secondItem="P5C-f6-TW6" secondAttribute="bottom" constant="5" id="pkE-hd-92k"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="Yay-SQ-vFK" secondAttribute="bottom" constant="10" id="qHJ-o9-YZ2"/>
-                <constraint firstItem="P5C-f6-TW6" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="r4m-B1-tDu"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="P5C-f6-TW6" secondAttribute="trailing" constant="10" id="uLB-Fx-eFP"/>
+                <constraint firstItem="y4B-Tk-M47" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="RW6-Zy-ZSd"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="y4B-Tk-M47" secondAttribute="bottom" id="fsy-he-udg"/>
+                <constraint firstItem="y4B-Tk-M47" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="jaw-pp-GD0"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="y4B-Tk-M47" secondAttribute="trailing" id="sFX-dd-qq5"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>
     </objects>
-    <resources>
-        <image name="close.png" width="24" height="24"/>
-    </resources>
 </document>

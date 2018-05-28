@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6050B1D920BC03C9004B566D /* Transition.h in Headers */ = {isa = PBXBuildFile; fileRef = 6050B1D720BC03C9004B566D /* Transition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6050B1DC20BC03C9004B566D /* Transition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050B1D520BC03C9004B566D /* Transition.framework */; };
+		6050B1DD20BC03C9004B566D /* Transition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6050B1D520BC03C9004B566D /* Transition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6050B1E120BC03E7004B566D /* PQPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 608544FE20B78F2400518BFC /* PQPresentationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6050B1E420BC0492004B566D /* PQTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 6050B1E320BC0492004B566D /* PQTransition.h */; };
 		608544E620B78E9100518BFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 608544E520B78E9100518BFC /* AppDelegate.m */; };
 		608544E920B78E9100518BFC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608544E820B78E9100518BFC /* ViewController.m */; };
 		608544EC20B78E9100518BFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608544EA20B78E9100518BFC /* Main.storyboard */; };
@@ -18,20 +23,15 @@
 		6085450720B7902800518BFC /* bg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6085450620B7902800518BFC /* bg.jpeg */; };
 		6085450A20B791BB00518BFC /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6085450820B791BB00518BFC /* close@2x.png */; };
 		6085450B20B791BB00518BFC /* close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6085450920B791BB00518BFC /* close@3x.png */; };
-		6085451520B79A0E00518BFC /* PQTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 6085451320B79A0E00518BFC /* PQTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6085451820B79A0E00518BFC /* PQTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6085451120B79A0E00518BFC /* PQTransition.framework */; };
-		6085451920B79A0E00518BFC /* PQTransition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6085451120B79A0E00518BFC /* PQTransition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6085451E20B79A1F00518BFC /* PQTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 608544FD20B78F2400518BFC /* PQTransition.m */; };
-		6085451F20B79A1F00518BFC /* PQPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608544FB20B78F2400518BFC /* PQPresentationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6085451620B79A0E00518BFC /* PBXContainerItemProxy */ = {
+		6050B1DA20BC03C9004B566D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 608544D920B78E9100518BFC /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6085451020B79A0E00518BFC;
-			remoteInfo = PQTransition;
+			remoteGlobalIDString = 6050B1D420BC03C8004B566D;
+			remoteInfo = Transition;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -42,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6085451920B79A0E00518BFC /* PQTransition.framework in Embed Frameworks */,
+				6050B1DD20BC03C9004B566D /* Transition.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +50,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6050B1D520BC03C9004B566D /* Transition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6050B1D720BC03C9004B566D /* Transition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transition.h; sourceTree = "<group>"; };
+		6050B1D820BC03C9004B566D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6050B1E320BC0492004B566D /* PQTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQTransition.h; sourceTree = "<group>"; };
 		608544E120B78E9100518BFC /* PQTransitionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PQTransitionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		608544E420B78E9100518BFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		608544E520B78E9100518BFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,7 +65,6 @@
 		608544F220B78E9200518BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		608544F320B78E9200518BFC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		608544FB20B78F2400518BFC /* PQPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQPresentationController.m; sourceTree = "<group>"; };
-		608544FC20B78F2400518BFC /* PQTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PQTransition.h; path = PQTransitionDemo/PQTransition/PQTransition.h; sourceTree = SOURCE_ROOT; };
 		608544FD20B78F2400518BFC /* PQTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQTransition.m; sourceTree = "<group>"; };
 		608544FE20B78F2400518BFC /* PQPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQPresentationController.h; sourceTree = "<group>"; };
 		6085450120B78F4300518BFC /* ShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
@@ -70,38 +73,45 @@
 		6085450620B7902800518BFC /* bg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpeg; sourceTree = "<group>"; };
 		6085450820B791BB00518BFC /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
 		6085450920B791BB00518BFC /* close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@3x.png"; sourceTree = "<group>"; };
-		6085451120B79A0E00518BFC /* PQTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PQTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6085451320B79A0E00518BFC /* PQTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PQTransition.h; sourceTree = "<group>"; };
-		6085451420B79A0E00518BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6050B1D120BC03C8004B566D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		608544DE20B78E9100518BFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6085451820B79A0E00518BFC /* PQTransition.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6085450D20B79A0E00518BFC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				6050B1DC20BC03C9004B566D /* Transition.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6050B1D620BC03C9004B566D /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				608544FA20B78F2400518BFC /* PQTransition */,
+				6050B1D720BC03C9004B566D /* Transition.h */,
+				6050B1D820BC03C9004B566D /* Info.plist */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		608544D820B78E9100518BFC = {
 			isa = PBXGroup;
 			children = (
 				6085450620B7902800518BFC /* bg.jpeg */,
 				6085450820B791BB00518BFC /* close@2x.png */,
 				6085450920B791BB00518BFC /* close@3x.png */,
-				6085451220B79A0E00518BFC /* PQTransition */,
 				608544E320B78E9100518BFC /* PQTransitionDemo */,
+				6050B1D620BC03C9004B566D /* Transition */,
 				608544E220B78E9100518BFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				608544E120B78E9100518BFC /* PQTransitionDemo.app */,
-				6085451120B79A0E00518BFC /* PQTransition.framework */,
+				6050B1D520BC03C9004B566D /* Transition.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,7 +128,6 @@
 		608544E320B78E9100518BFC /* PQTransitionDemo */ = {
 			isa = PBXGroup;
 			children = (
-				608544FA20B78F2400518BFC /* PQTransition */,
 				608544E420B78E9100518BFC /* AppDelegate.h */,
 				608544E520B78E9100518BFC /* AppDelegate.m */,
 				608544E720B78E9100518BFC /* ViewController.h */,
@@ -138,19 +147,10 @@
 		608544FA20B78F2400518BFC /* PQTransition */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = PQTransition;
-			sourceTree = "<group>";
-		};
-		6085451220B79A0E00518BFC /* PQTransition */ = {
-			isa = PBXGroup;
-			children = (
-				6085451320B79A0E00518BFC /* PQTransition.h */,
+				6050B1E320BC0492004B566D /* PQTransition.h */,
 				608544FE20B78F2400518BFC /* PQPresentationController.h */,
 				608544FB20B78F2400518BFC /* PQPresentationController.m */,
-				608544FC20B78F2400518BFC /* PQTransition.h */,
 				608544FD20B78F2400518BFC /* PQTransition.m */,
-				6085451420B79A0E00518BFC /* Info.plist */,
 			);
 			path = PQTransition;
 			sourceTree = "<group>";
@@ -158,17 +158,37 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6085450E20B79A0E00518BFC /* Headers */ = {
+		6050B1D220BC03C8004B566D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6085451520B79A0E00518BFC /* PQTransition.h in Headers */,
+				6050B1E420BC0492004B566D /* PQTransition.h in Headers */,
+				6050B1D920BC03C9004B566D /* Transition.h in Headers */,
+				6050B1E120BC03E7004B566D /* PQPresentationController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		6050B1D420BC03C8004B566D /* Transition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6050B1DE20BC03C9004B566D /* Build configuration list for PBXNativeTarget "Transition" */;
+			buildPhases = (
+				6050B1D020BC03C8004B566D /* Sources */,
+				6050B1D120BC03C8004B566D /* Frameworks */,
+				6050B1D220BC03C8004B566D /* Headers */,
+				6050B1D320BC03C8004B566D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Transition;
+			productName = Transition;
+			productReference = 6050B1D520BC03C9004B566D /* Transition.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		608544E020B78E9100518BFC /* PQTransitionDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 608544F720B78E9200518BFC /* Build configuration list for PBXNativeTarget "PQTransitionDemo" */;
@@ -181,30 +201,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				6085451720B79A0E00518BFC /* PBXTargetDependency */,
+				6050B1DB20BC03C9004B566D /* PBXTargetDependency */,
 			);
 			name = PQTransitionDemo;
 			productName = PQTransitionDemo;
 			productReference = 608544E120B78E9100518BFC /* PQTransitionDemo.app */;
 			productType = "com.apple.product-type.application";
-		};
-		6085451020B79A0E00518BFC /* PQTransition */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6085451A20B79A0E00518BFC /* Build configuration list for PBXNativeTarget "PQTransition" */;
-			buildPhases = (
-				6085450C20B79A0E00518BFC /* Sources */,
-				6085450D20B79A0E00518BFC /* Frameworks */,
-				6085450E20B79A0E00518BFC /* Headers */,
-				6085450F20B79A0E00518BFC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PQTransition;
-			productName = PQTransition;
-			productReference = 6085451120B79A0E00518BFC /* PQTransition.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -215,10 +217,10 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = pgq;
 				TargetAttributes = {
-					608544E020B78E9100518BFC = {
+					6050B1D420BC03C8004B566D = {
 						CreatedOnToolsVersion = 9.3;
 					};
-					6085451020B79A0E00518BFC = {
+					608544E020B78E9100518BFC = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
@@ -237,12 +239,19 @@
 			projectRoot = "";
 			targets = (
 				608544E020B78E9100518BFC /* PQTransitionDemo */,
-				6085451020B79A0E00518BFC /* PQTransition */,
+				6050B1D420BC03C8004B566D /* Transition */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6050B1D320BC03C8004B566D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		608544DF20B78E9100518BFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,16 +266,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6085450F20B79A0E00518BFC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6050B1D020BC03C8004B566D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
 		608544DD20B78E9100518BFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,22 +287,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6085450C20B79A0E00518BFC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6085451F20B79A1F00518BFC /* PQPresentationController.m in Sources */,
-				6085451E20B79A1F00518BFC /* PQTransition.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6085451720B79A0E00518BFC /* PBXTargetDependency */ = {
+		6050B1DB20BC03C9004B566D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6085451020B79A0E00518BFC /* PQTransition */;
-			targetProxy = 6085451620B79A0E00518BFC /* PBXContainerItemProxy */;
+			target = 6050B1D420BC03C8004B566D /* Transition */;
+			targetProxy = 6050B1DA20BC03C9004B566D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -317,6 +317,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6050B1DF20BC03C9004B566D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Transition/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cod.pgq.Transition;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6050B1E020BC03C9004B566D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Transition/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cod.pgq.Transition;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		608544F520B78E9200518BFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -459,61 +513,18 @@
 			};
 			name = Release;
 		};
-		6085451B20B79A0E00518BFC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PQTransition/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = cod.pgq.PQTransition;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6085451C20B79A0E00518BFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PQTransition/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = cod.pgq.PQTransition;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6050B1DE20BC03C9004B566D /* Build configuration list for PBXNativeTarget "Transition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6050B1DF20BC03C9004B566D /* Debug */,
+				6050B1E020BC03C9004B566D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		608544DC20B78E9100518BFC /* Build configuration list for PBXProject "PQTransitionDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -528,15 +539,6 @@
 			buildConfigurations = (
 				608544F820B78E9200518BFC /* Debug */,
 				608544F920B78E9200518BFC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6085451A20B79A0E00518BFC /* Build configuration list for PBXNativeTarget "PQTransition" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6085451B20B79A0E00518BFC /* Debug */,
-				6085451C20B79A0E00518BFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
