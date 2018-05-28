@@ -11,7 +11,7 @@
 		6050B1DC20BC03C9004B566D /* Transition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050B1D520BC03C9004B566D /* Transition.framework */; };
 		6050B1DD20BC03C9004B566D /* Transition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6050B1D520BC03C9004B566D /* Transition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6050B1E120BC03E7004B566D /* PQPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 608544FE20B78F2400518BFC /* PQPresentationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6050B1E420BC0492004B566D /* PQTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 6050B1E320BC0492004B566D /* PQTransition.h */; };
+		6050B1E420BC0492004B566D /* PQTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 6050B1E320BC0492004B566D /* PQTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6050B1E520BC0638004B566D /* PQPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608544FB20B78F2400518BFC /* PQPresentationController.m */; };
 		6050B1E620BC0638004B566D /* PQTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 608544FD20B78F2400518BFC /* PQTransition.m */; };
 		608544E620B78E9100518BFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 608544E520B78E9100518BFC /* AppDelegate.m */; };
@@ -164,8 +164,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6050B1E420BC0492004B566D /* PQTransition.h in Headers */,
 				6050B1D920BC03C9004B566D /* Transition.h in Headers */,
+				6050B1E420BC0492004B566D /* PQTransition.h in Headers */,
 				6050B1E120BC03E7004B566D /* PQPresentationController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
