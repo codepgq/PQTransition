@@ -35,18 +35,22 @@ typedef NS_ENUM(NSUInteger, PQTransitionAnimationType) {
 };
 
 @interface PQTransition : NSObject<UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning>
-///动画类型
+/// 动画类型
 @property (nonatomic, assign) PQTransitionAnimationType type;
-///当前的状态
+/// 当前的状态
 @property (nonatomic,assign) BOOL isPresent;
-///要显示的view的大小位置
+/// 要显示的view的大小位置
 @property (nonatomic,assign) CGRect presentFrame;
-///动画开始之前的大小位置 配合 'PQTransitionAnimationTypeFromFrame' 'PQTransitionAnimationTypeFromFrame2' 'PQTransitionAnimationTypeCircleOverlay' 使用
+/// 动画开始之前的大小位置 配合 'PQTransitionAnimationTypeFromFrame' 'PQTransitionAnimationTypeFromFrame2' 'PQTransitionAnimationTypeCircleOverlay' 使用
 @property (nonatomic,assign) CGRect animationBeginFrame;
-///动画时长 结束动画占总时长的8%
+/// 动画时长 结束动画占总时长的8%
 @property (nonatomic,assign) NSTimeInterval duration;
-///遮罩透明贴 0 完全透明 1 黑色
+/// 遮罩透明贴 0 完全透明 1 黑色
 @property (nonatomic,assign) CGFloat overlayAlpha;
+/// 遮罩颜色 默认黑色
+@property (nonatomic,strong) UIColor *overlayColor;
+/// 点击空白区域dismiss，默认是 YES
+@property (nonatomic,assign) BOOL touchOverlayDismiss;
 
 
 /**

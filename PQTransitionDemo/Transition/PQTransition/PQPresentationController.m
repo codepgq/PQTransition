@@ -28,8 +28,6 @@
 - (UIView *)overlay{
     if (!_overlay) {
         _overlay = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        _overlay.userInteractionEnabled = YES;
-        _overlay.backgroundColor = [UIColor colorWithWhite:0 alpha:_overlayAlpha];
         UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(close)];
         [_overlay addGestureRecognizer:tap];
     }

@@ -35,6 +35,11 @@ static int showType = 0;
     CGFloat showW = 300;
     CGFloat showH = 280;
     show.transition.presentFrame = CGRectMake((screenW - showW) * 0.5, (screenH - showH) * 0.5, showW, showH);
+    
+    if (showType > 10) {
+        showType = 0;
+    }
+    
     show.transition.type = showType;
     showType ++;
     

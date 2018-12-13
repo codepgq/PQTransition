@@ -20,6 +20,8 @@
     if (self) {
         self.modalPresentationStyle = UIModalPresentationCustom;
         self.transitioningDelegate = self.transition;
+//        self.transition.overlayColor = [UIColor orangeColor];
+//        self.transition.overlayAlpha = 0.5;
     }
     return self;
 }

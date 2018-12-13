@@ -137,6 +137,8 @@
         self.presentFrame = CGRectMake(0, 0, 200, 180);
         self.overlayAlpha = 0.3;
         self.type = PQTransitionAnimationTypePopverSpring;
+        self.overlayColor = [UIColor colorWithWhite:0 alpha:_overlayAlpha];
+        self.touchOverlayDismiss = true;
     }
     return self;
 }
@@ -158,7 +160,9 @@
 - (nullable UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(nullable UIViewController *)presenting sourceViewController:(UIViewController *)source NS_AVAILABLE_IOS(8_0){
     PQPresentationController * controller = [[PQPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
     controller.presentFrame = self.presentFrame;
-    controller.overlayAlpha = _overlayAlpha;
+    [controller setValue:@(self.touchOverlayDismiss) forKeyPath:@"overlay.userInteractionEnabled"];
+    UIColor *color = [self.overlayColor colorWithAlphaComponent:self.overlayAlpha];
+    [controller setValue:color forKeyPath:@"overlay.backgroundColor"];
     return controller;
 }
 

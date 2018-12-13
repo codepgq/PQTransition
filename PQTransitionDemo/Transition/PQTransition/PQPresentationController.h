@@ -10,5 +10,4 @@
 
 @interface PQPresentationController : UIPresentationController
 @property (nonatomic,assign) CGRect presentFrame;
-@property (nonatomic,assign) CGFloat overlayAlpha;
 @end
