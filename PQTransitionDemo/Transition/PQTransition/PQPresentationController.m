@@ -23,6 +23,9 @@
 - (void)containerViewWillLayoutSubviews{
     self.presentedView.frame = self.presentFrame;
     [self.containerView insertSubview:self.overlay atIndex:0];
+    [UIView animateWithDuration:0.25 animations:^{
+        self.overlay.alpha = 1;
+    }];
 }
 
 - (UIView *)overlay{
@@ -30,6 +33,7 @@
         _overlay = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(close)];
         [_overlay addGestureRecognizer:tap];
+        _overlay.alpha = 0;
     }
     return _overlay;
 }

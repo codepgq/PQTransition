@@ -10,4 +10,5 @@
 
 @interface PQPresentationController : UIPresentationController
 @property (nonatomic,assign) CGRect presentFrame;
+@property (nonatomic,assign) NSTimeInterval duration;
 @end

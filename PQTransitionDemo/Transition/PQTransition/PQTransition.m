@@ -159,6 +159,7 @@
 
 - (nullable UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(nullable UIViewController *)presenting sourceViewController:(UIViewController *)source NS_AVAILABLE_IOS(8_0){
     PQPresentationController * controller = [[PQPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
+    controller.duration = self.duration;
     controller.presentFrame = self.presentFrame;
     [controller setValue:@(self.touchOverlayDismiss) forKeyPath:@"overlay.userInteractionEnabled"];
     UIColor *color = [self.overlayColor colorWithAlphaComponent:self.overlayAlpha];
