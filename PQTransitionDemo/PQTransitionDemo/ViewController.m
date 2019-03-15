@@ -36,12 +36,9 @@ static int showType = 0;
     CGFloat showH = 280;
     show.transition.presentFrame = CGRectMake((screenW - showW) * 0.5, (screenH - showH) * 0.5, showW, showH);
     
-    if (showType > 10) {
-        showType = 0;
-    }
-    
-    show.transition.type = showType;
+    show.transition.type = showType % 10;
     showType ++;
+    
     
     [show.transition listenWillDismiss:^{
         NSLog(@"will dismiss");

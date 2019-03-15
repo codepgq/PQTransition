@@ -159,7 +159,6 @@
 
 - (nullable UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(nullable UIViewController *)presenting sourceViewController:(UIViewController *)source NS_AVAILABLE_IOS(8_0){
     PQPresentationController * controller = [[PQPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
-    controller.duration = self.duration;
     controller.presentFrame = self.presentFrame;
     [controller setValue:@(self.touchOverlayDismiss) forKeyPath:@"overlay.userInteractionEnabled"];
     UIColor *color = [self.overlayColor colorWithAlphaComponent:self.overlayAlpha];
@@ -231,6 +230,7 @@
         UIView * fromView = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey].view;
         [UIView animateWithDuration:self.duration animations:^{
             fromView.transform = CGAffineTransformMakeScale(1, 0.0001);
+            [transitionContext containerView].subviews.firstObject.alpha = 0;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:YES];
             [self didDidmiss];
@@ -270,13 +270,15 @@
         view2.frame = frame;
     }
     
-    [cutView insertSubview:view1 atIndex:1];
-    [cutView insertSubview:view2 atIndex:1];
-    
+//    [cutView insertSubview:view1 atIndex:1];
+//    [cutView insertSubview:view2 atIndex:1];
+
+    [cutView addSubview:view1];
+    [cutView addSubview:view2];
     
     
     if (self.isPresent) {
-        [toView removeFromSuperview];
+//        [toView removeFromSuperview];
         if (_type == PQTransitionAnimationTypeCutVertical) {
             transfrom1 =  CGAffineTransformMakeTranslation(0, -TRANSITION_H);
             transfrom2 =  CGAffineTransformMakeTranslation(0, TRANSITION_H * 1.5);
@@ -292,11 +294,14 @@
     if (_isPresent) {
         [transitionContext containerView].subviews.firstObject.alpha = 0;
         toView.alpha = 0;
+        
     }else{
         fromView.alpha = 0;
+        [transitionContext containerView].subviews.firstObject.alpha = 0;
+        toView.alpha = 0;
     }
     
-    [UIView animateWithDuration:self.duration delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:self.duration delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         if (self.isPresent) {
             view1.transform = CGAffineTransformIdentity;
             view2.transform = CGAffineTransformIdentity;
@@ -311,19 +316,26 @@
             [transitionContext containerView].subviews.firstObject.alpha = 0;
         }
         
+        
+        
     } completion:^(BOOL finished) {
-        if (_isPresent) {
-            [cutView addSubview:toView];
-        }
+//        if (_isPresent) {
+//           [cutView addSubview:toView];
+//        }
+
     }];
     
-    [UIView animateWithDuration:self.duration * 0.5  delay:self.duration options:UIViewAnimationOptionCurveLinear animations:^{
+    
+    [UIView animateWithDuration:0.001  delay:self.duration  options:UIViewAnimationOptionCurveLinear animations:^{
+//        [cutView addSubview:toView];
         view1.alpha = 0.001;
         view2.alpha = 0.001;
         if (_isPresent) {
+            
             [transitionContext containerView].subviews.firstObject.alpha = 1;
             toView.alpha = 1;
         }
+        
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:YES];
         [self didDidmiss];
@@ -420,7 +432,7 @@
             toView.frame = frame;
         } completion:^(BOOL finished) {
             
-           
+            
         }];
         
         [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:[self transitionDuration:transitionContext] usingSpringWithDamping:0.8 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
@@ -520,9 +532,9 @@
         [[transitionContext containerView] addSubview:toView];
         
         toView.transform = transfrom;
-//        [transitionContext containerView].subviews.firstObject.alpha = 1;
-//        [transitionContext containerView].subviews.firstObject.alpha = 0;
-        NSLog(@"%@",transitionContext.containerView.subviews);
+        //        [transitionContext containerView].subviews.firstObject.alpha = 1;
+        //        [transitionContext containerView].subviews.firstObject.alpha = 0;
+        
         [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
             toView.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
