@@ -306,7 +306,7 @@
             view1.transform = CGAffineTransformIdentity;
             view2.transform = CGAffineTransformIdentity;
         }else{
-            if (_type == PQTransitionAnimationTypeCutVertical) {
+            if (self->_type == PQTransitionAnimationTypeCutVertical) {
                 view1.transform =  CGAffineTransformMakeTranslation(0, -TRANSITION_H);
                 view2.transform =  CGAffineTransformMakeTranslation(0, TRANSITION_H);
             }else{
@@ -330,7 +330,7 @@
 //        [cutView addSubview:toView];
         view1.alpha = 0.001;
         view2.alpha = 0.001;
-        if (_isPresent) {
+        if (self->_isPresent) {
             
             [transitionContext containerView].subviews.firstObject.alpha = 1;
             toView.alpha = 1;
@@ -339,7 +339,7 @@
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:YES];
         [self didDidmiss];
-        if (!_isPresent) {
+        if (!self->_isPresent) {
             [view2 removeFromSuperview];
             [view1 removeFromSuperview];
         }
